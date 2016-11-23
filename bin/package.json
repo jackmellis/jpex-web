@@ -1,0 +1,12 @@
+{
+  "name": "jpex-web",
+  "version": "0.1.0",
+  "description": "Jpex for the Browser",
+  "main": "jpex.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "cd ../compile && node index"
+  },
+  "author": "Jack Ellis",
+  "license": "ISC"
+}
