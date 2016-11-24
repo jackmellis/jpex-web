@@ -5,7 +5,7 @@
   "main": "jpex.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "cd ../compile && node index"
+    "build" : "cd ../compile && npm install && node index"
   },
   "author": "Jack Ellis",
   "license": "ISC"
