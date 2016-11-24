@@ -102,7 +102,7 @@
     var Class;
     Class = function(namedParameters){
       if (!(this instanceof Class)){
-        return new Class(options);
+        return new Class(namedParameters);
       }
 
       try{

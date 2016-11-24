@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "karma start ./full.karma.conf.js"
+    "test": "karma start ./full.karma.conf.js",
+    "cover" : "karma start ./cover.karma.conf.js"
   },
   "author": "",
   "license": "ISC",

@@ -31,15 +31,15 @@
 <script src="./jpex/main.js"></script> -->
 
 <!-- <script src="./bin/jpex.full.js"></script> -->
-<script src="./bin/jpex.min.js"></script>
+<script src="./bin/jpex.full.js"></script>
 
 <script>
 var Class = Jpex.extend(function(myService){
   myService.dosomething();
 });
-Class.Register.Service('myService', function($ilog){
+Class.Register.Service('myService', function($ilog, $copy, $typeof, $error, $resolve, $timeout){
   this.dosomething = function () {
-    $ilog.error('Do Something...');
+    $ilog($typeof($copy('string')));
   };
 });
 Class();

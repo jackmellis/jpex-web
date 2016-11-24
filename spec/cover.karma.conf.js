@@ -10,13 +10,16 @@ module.exports = function (config) {
 
       './spec/**/*.karma.js'
     ],
-    reporters : ['progress'],
+    reporters : ['progress', 'coverage'],
+    preprocessors: {
+    "jpex/**/*.js" : ['coverage']
+    },
     port : 9876,
     colors : true,
     logLevel : config.LOG_INFO,
-    autoWatch : true,
+    autoWatch : false,
     browsers : ['PhantomJS'],
-    singleRun : false,
+    singleRun : true,
     concurrency : Infinity
   });
 };

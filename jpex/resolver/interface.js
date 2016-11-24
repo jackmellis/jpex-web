@@ -39,7 +39,7 @@
       }
 
       if (ifc.interface){
-        ifc.interface.forEach(function(i) { return jpex.resolver.interfaceService.validateInterface(Class, Class._interfaces[i], value) });
+        ifc.interface.forEach(function(i) { return jpx.resolver.interfaceService.validateInterface(Class, Class._interfaces[i], value) });
       }
     }
   };
@@ -64,7 +64,7 @@
           for (var z = 0; z < ifc.length; z++){
             var t = crossReferenceInterface(Class, ifc[z], obj);
             if (t){
-              stack.push(Class.Typeof(ifc[z]));
+              stack.push(jpx.typeof(ifc[z]));
             }else{
               return;
             }

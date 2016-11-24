@@ -34,7 +34,7 @@
       },
       InvokeParent : function(parentClass, instance, values, args){
         if (values && !Array.isArray(values)){
-          values = Array.from(values);
+          values = Array.prototype.slice.call(values);
         }
         args = this.NamedParameters(values, args);
         parentClass.call(instance, args);

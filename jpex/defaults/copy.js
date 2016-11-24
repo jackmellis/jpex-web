@@ -46,7 +46,7 @@
         return copier(obj, null, true);
       };
       $copy.extend = function () {
-        var args = Array.from(arguments);
+        var args = Array.prototype.slice.call(arguments);
         var target = args.shift();
         args.forEach(function (arg) {
           copier(arg, target, true);
