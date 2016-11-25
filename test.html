@@ -37,9 +37,22 @@
 var Class = Jpex.extend(function(myService){
   myService.dosomething();
 });
-Class.Register.Service('myService', function($ilog, $copy, $typeof, $error, $resolve, $timeout){
+Class.Register.Factory('myConfig', '$xhrConfig', function (config) {
+  config.headers['Access-Control-Allow-Headers'] = '*'
+  config.headers['Access-Control-Allow-Origin'] = '*';
+  return config;
+}).interface('$ixhrConfig');
+Class.Register.Service('myService', function($ilog, $copy, $typeof, $error, $resolve, $timeout, $xhr){
   this.dosomething = function () {
-    $ilog($typeof($copy('string')));
+    $xhr({
+      method : 'POST',
+      url : 'http://www.mocky.io/v2/583837521100005d088fd2f4'
+    }).then(function (response) {
+      $ilog(response);
+    });
+    $xhr({url : 'blaser'}).catch(function (response) {
+      $ilog(response);
+    });
   };
 });
 Class();

@@ -4,6 +4,9 @@
 
   var Base = Fn.extend();
   jpx.defaults.apply(Base);
+  Object.defineProperty(Base, '_jpx', {
+    value : jpx
+  });
 
   window.Jpex = Base;
 
