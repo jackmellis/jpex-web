@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.factories.factories.ErrorType = function(name, fn){
     // Register an error types constant
     if (!Object.hasOwnProperty.call(this._factories, '_errorTypes')){
@@ -29,5 +28,3 @@
 
     return this;
   };
-
-}(jpx));

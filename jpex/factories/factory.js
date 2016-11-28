@@ -1,4 +1,3 @@
-(function(jpx){
   jpx.factories.factories.Factory = function (name, dependencies, fn, singleton) {
     if (typeof dependencies === 'function'){
       singleton = fn;
@@ -28,4 +27,3 @@
 
     return jpx.factories.wrapper(factoryObj).lifecycle[singleton ? 'application' : 'instance']();
   }
-}(jpx));

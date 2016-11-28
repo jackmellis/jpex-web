@@ -1,4 +1,3 @@
-(function(jpx){
   var Fn = function(){};
   Fn.extend = extend;
 
@@ -166,4 +165,3 @@
   function setFactories(Class){
     jpx.factories.apply(Class);
   }
-}(jpx));

@@ -1,4 +1,3 @@
-(function (jpx) {
   jpx.factories = {
     factories : {},
     apply : function (Class) {
@@ -14,4 +13,3 @@
       Class.Register = register;
     }
   };
-}(jpx));

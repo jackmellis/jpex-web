@@ -1,4 +1,3 @@
-(function(jpx) {
   var util = {
     string : '',
     number : 0,
@@ -44,4 +43,3 @@
     };
     return jpx.factories.wrapper(this._interfaces[name]);
   };
-}(jpx));

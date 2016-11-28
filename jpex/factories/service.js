@@ -1,4 +1,3 @@
-(function (jpx) {
   jpx.factories.factories.Service = function (name, dependencies, fn, singleton) {
     if (typeof dependencies === 'function'){
       singleton = fn;
@@ -80,4 +79,3 @@
     }
     return service;
   }
-}(jpx));

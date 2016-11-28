@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.resolver = {
     extractParameters : function(fn){
       var reg_comments = /\/\*(.*)\*\//g,
@@ -187,4 +186,3 @@
       return name.substr(1);
     }
   }
-}(jpx));

@@ -1,4 +1,3 @@
-(function (jpx) {
   jpx.factories.wrapper = function(factory){
     var wrapper = {
       interface : function(val){
@@ -27,4 +26,3 @@
 
     return wrapper;
   };
-}(jpx));

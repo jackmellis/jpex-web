@@ -1,4 +1,3 @@
-(function(jpx){
   // These are private methods attached to each Class extended from jpex
   // As it's used so often, the first parameter of every method should be ParentClass
   jpx.privates = {
@@ -83,4 +82,3 @@
       });
     }
   };
-}(jpx));

@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function (NewClass) {
       NewClass.Register.Factory('$resolve', null, function () {
         var TheClass = this;
@@ -7,4 +6,3 @@
         };
       }).lifecycle.class();
   });
-}(jpx));

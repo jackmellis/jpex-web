@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.resolver.factoryService = {
     getFactory : function(Class, name, optional){
       var factory = Class._resolved[name];
@@ -13,7 +12,7 @@
           jpx.jpexError(['Unable to find required dependency:', name].join(' '));
         }
       }
-    
+
       return factory;
     },
 
@@ -42,4 +41,3 @@
   function isValidFactory(factory){
     return factory && ((factory.fn && typeof factory.fn === 'function') || factory.constant || factory.resolved);
   }
-}(jpx));

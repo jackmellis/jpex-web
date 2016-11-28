@@ -1,5 +1,4 @@
 // Create an Enumeration
-(function(jpx) {
   jpx.factories.factories.Enum = function(name, value){
     var self = this;
 
@@ -28,4 +27,3 @@
 
     return this.Register.Constant(name, obj);
   };
-}(jpx));

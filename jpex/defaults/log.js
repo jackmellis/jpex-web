@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register.Interface('$ilog', function(i){
       return i.functionWith({
@@ -24,4 +23,3 @@
     .interface('$ilog')
     .lifecycle.application();
   });
-}(jpx));

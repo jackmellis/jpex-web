@@ -1,4 +1,3 @@
-(function(jpx){
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register.Interface('$ixhrConfig', function(i){
       return {
@@ -21,4 +20,3 @@
       };
     }).interface('$ixhrConfig');
   });
-}(jpx));

@@ -1,4 +1,3 @@
-(function(jpx){
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register.Factory('$xhrProvider', null, function () {
       return function(){
@@ -6,4 +5,3 @@
       };
     }).lifecycle.application();
   });
-}(jpx));

@@ -1,4 +1,3 @@
-(function(jpx){
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register.Interface('$ixhr', function(i){ return i.function; });
 
@@ -78,4 +77,3 @@
       };
     }).interface('$ixhr');
   });
-}(jpx));

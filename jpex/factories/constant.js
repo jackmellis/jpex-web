@@ -1,4 +1,3 @@
-(function(jpx){
 // Return an object
   jpx.factories.factories.Constant = function (name, obj) {
     this._factories[name] = {
@@ -7,4 +6,3 @@
     };
     return jpx.factories.wrapper(this._factories[name]).lifecycle.application();
   };
-}(jpx));

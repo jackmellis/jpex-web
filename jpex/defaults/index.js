@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults = {
     defaults : [],
     apply : function (Class) {
@@ -7,4 +6,3 @@
       })
     }
   }
-}(jpx));

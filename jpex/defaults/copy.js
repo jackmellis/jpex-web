@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register.Factory('$copy', ['$typeof'], function ($typeof) {
       var copier = function (from, to, recur) {
@@ -56,4 +55,3 @@
       return $copy;
     }).lifecycle.application();
   });
-}(jpx));

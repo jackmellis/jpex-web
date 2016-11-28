@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function(NewClass){
     NewClass.Register.Factory('$typeof', null, function () {
       var standardTypes = ['number', 'boolean', 'string', 'array', 'function', 'date', 'regexp', 'null', 'undefined'];
@@ -8,4 +7,3 @@
       };
     }).lifecycle.application();
   });
-}(jpx));

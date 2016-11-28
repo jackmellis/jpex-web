@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.resolver.interfaceService = {
     factoryImplements : function(Class, fname, iname){
         var factory = Class._factories[fname];
@@ -125,4 +124,3 @@
 
     return list;
   }
-}(jpx));

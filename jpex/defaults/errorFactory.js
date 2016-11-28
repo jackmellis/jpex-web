@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function (NewClass) {
     NewClass.Register
       .Factory('$errorFactory', null, function(){
@@ -40,4 +39,3 @@
     })
     .lifecycle.none();
   });
-}(jpx));

@@ -1,4 +1,3 @@
-(function(jpx) {
   jpx.defaults.defaults.push(function(NewClass){
     NewClass.Register.Interface('$ierror', function(i){
       return i.functionWith({
@@ -15,4 +14,3 @@
       .interface('$ierror')
       .lifecycle.application();
   });
-}(jpx));
