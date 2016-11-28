@@ -14,7 +14,10 @@
         method : 'GET',
         url : '',
         data : null,
-        headers : {}
+        headers : {
+          'X-Requested-With' : 'XMLHttpRequest',
+          'Content-Type' : 'application/json'
+        }
       };
     }).interface('$ixhrConfig');
   });

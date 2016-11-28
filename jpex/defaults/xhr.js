@@ -15,7 +15,12 @@
           xhr.open(opt.method, opt.url);
           setRequestHeaders();
 
-          xhr.send(opt.data);
+          var data = formatData();
+          xhr.send(data);
+
+          function formatData(){
+            return opt.data ? JSON.stringify(opt.data) : null;
+          }
 
           function setRequestHeaders() {
             var keys = Object.keys(opt.headers);
@@ -40,7 +45,7 @@
           }
 
           function onError() {
-            reject(createResult());
+            reject(createResult(''));
           }
 
           function getResponseData(){
@@ -55,11 +60,19 @@
           }
 
           function createResult(data) {
-            return {
-              contentType : xhr.responseType || 'plain',
-              status : xhr.status,
-              data : data
-            };
+            var result = {};
+            result.status = xhr.status;
+            result.contentType = xhr.getResponseHeader('Content-Type').split(';')[0];
+
+            if (data && typeof data === 'string'){
+              switch(result.contentType){
+                case 'application/json':
+                case 'text/json':
+                  data = JSON.parse(data);
+              }
+              result.data = data;
+            }
+            return result;
           }
         });
       };

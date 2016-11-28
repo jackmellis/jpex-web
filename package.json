@@ -1,0 +1,27 @@
+{
+  "name": "jpex-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "jpex-web": "jpex.full.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "cd spec && npm test",
+    "cover" : "cd spec && npm run cover",
+    "build" : "cd compile && npm install && node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackmellis/jpex-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackmellis/jpex-web/issues"
+  },
+  "homepage": "https://github.com/jackmellis/jpex-web#readme"
+}

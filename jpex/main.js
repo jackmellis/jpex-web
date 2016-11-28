@@ -8,7 +8,11 @@
     value : jpx
   });
 
-  window.Jpex = Base;
+  if (typeof module !== 'undefined' && module.exports){
+    module.exports = Base;
+  }else if (window){
+    window.Jpex = Base;
+  }
 
   function extend(options){
     var Parent = this;

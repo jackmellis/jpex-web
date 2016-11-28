@@ -49,7 +49,7 @@ var compile = Jpex.extend(function (glob, $fs, $log, $promise, uglify) {
     return [
       '(function(window, jpx){',
       str,
-      '}(typeof module !== "undefined" && module.exports || window || {}, {}));'
+      '}(window, {}));'
     ].join('\n');
   };
 
