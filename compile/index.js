@@ -55,7 +55,7 @@ var compile = Jpex.extend(function (glob, $fs, $log, $promise, uglify) {
       '(function(window, jpx){',
       str,
       '}(window, {}));'
-    ].join('\n');
+    ].join('\n').replace(/\n\n/g, '\n');
   };
 
   this.uglify = function (str) {
