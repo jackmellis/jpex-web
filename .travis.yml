@@ -1,0 +1,22 @@
+branches :
+  only :
+    - master
+language : node_js
+node_js :
+  - 4
+install :
+  - npm install
+  - npm run build
+
+  - cd spec && npm install && cd ..
+
+  - npm install codeclimate-test-reporter -g
+script :
+  - cd spec
+  - karma start ./cover.karma.config.js
+  - cd ..
+  - istanbul report --dir ./coverage lcovonly
+
+  - node lcov-fix
+after_script :
+  - codeclimate-test-reporter < lcov.info

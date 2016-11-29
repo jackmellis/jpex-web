@@ -14,6 +14,10 @@ module.exports = function (config) {
     preprocessors: {
     "jpex/**/*.js" : ['coverage']
     },
+    coverageReporter : {
+      type : 'json',
+      dir : 'coverage/'
+    },
     port : 9876,
     colors : true,
     logLevel : config.LOG_INFO,

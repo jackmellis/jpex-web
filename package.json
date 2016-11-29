@@ -11,8 +11,8 @@
   },
   "scripts": {
     "test": "cd spec && npm test",
-    "cover" : "cd spec && npm run cover",
-    "build" : "cd compile && npm install && node index"
+    "cover": "cd spec && npm run cover",
+    "build": "cd compile && npm install && node index"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jackmellis/jpex-web/issues"
   },
-  "homepage": "https://github.com/jackmellis/jpex-web#readme"
+  "homepage": "https://github.com/jackmellis/jpex-web#readme",
+  "dependencies": {
+    "jpex": "^1.4.0"
+  }
 }
