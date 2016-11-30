@@ -13,7 +13,7 @@ install :
   - npm install codeclimate-test-reporter -g
 script :
   - cd spec
-  - karma start ./cover.karma.config.js
+  - karma start ./cover.karma.conf.js
   - cd ..
   - istanbul report --dir ./coverage lcovonly
 
