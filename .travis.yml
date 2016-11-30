@@ -11,9 +11,10 @@ install :
   - cd spec && npm install && cd ..
 
   - npm install codeclimate-test-reporter -g
+  - npm install istanbul -g
 script :
   - cd spec
-  - karma start ./cover.karma.config.js
+  - karma start ./cover.karma.conf.js
   - cd ..
   - istanbul report --dir ./coverage lcovonly
 
