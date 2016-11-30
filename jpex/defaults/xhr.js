@@ -3,10 +3,12 @@
 
     NewClass.Register.Factory('$xhr', ['$ipromise', '$xhrProvider', '$copy', '$ixhrConfig'], function ($promise, $xhrProvider, $copy, $xhrConfig) {
       return function (opt) {
-        opt = $copy.extend($xhrConfig, opt);
+        opt = $copy.extend({}, $xhrConfig, opt);
+        opt.method = opt.method.toUpperCase();
 
         return $promise(function(resolve, reject){
           var xhr = $xhrProvider();
+          var data = formatData();
 
           xhr.addEventListener('load', onLoad);
           xhr.addEventListener('error', onError);
@@ -14,11 +16,24 @@
           xhr.open(opt.method, opt.url);
           setRequestHeaders();
 
-          var data = formatData();
           xhr.send(data);
 
           function formatData(){
-            return opt.data ? JSON.stringify(opt.data) : null;
+            if (opt.method === 'GET' && opt.data){
+              var params;
+              if (typeof opt.data === 'object'){
+                params = Object.keys(opt.data)
+                .map(function (key) {
+                  return [key, opt.data[key]].join('=');
+                })
+                .join('&');
+              }else{
+                params = opt.data;
+              }
+              opt.url += '?' + params;
+            }else if (opt.data){
+              return JSON.stringify(opt.data);
+            }
           }
 
           function setRequestHeaders() {
@@ -67,7 +82,11 @@
               switch(result.contentType){
                 case 'application/json':
                 case 'text/json':
-                  data = JSON.parse(data);
+                  try{
+                    data = JSON.parse(data);
+                  }catch(e){
+                    return reject(e);
+                  }
               }
               result.data = data;
             }

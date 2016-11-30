@@ -32,7 +32,13 @@ describe('Jpex - Default Factories', function(){
     });
     it('should open an xhr request', function () {
       $xhr({url : 'path', method : 'post'});
-      expect(xhr.open).toHaveBeenCalledWith('post', 'path');
+      expect(xhr.open).toHaveBeenCalledWith('POST', 'path');
+    });
+    it('should attach data to a get url', function () {
+      $xhr({url : 'path', method : 'get', data : 'someFlag'});
+      $xhr({url : 'path2', method : 'get', data : { x : 'y', a : 'b' } });
+      expect(xhr.open).toHaveBeenCalledWith('GET', 'path?someFlag');
+      expect(xhr.open).toHaveBeenCalledWith('GET', 'path2?x=y&a=b');
     });
     it('should set the request header', function () {
       $xhr({
@@ -47,6 +53,8 @@ describe('Jpex - Default Factories', function(){
     });
     it('should send the data', function () {
       $xhr({
+        method : 'put',
+        url : 'path',
         data : {x : 3}
       });
       expect(xhr.send).toHaveBeenCalledWith('{"x":3}');

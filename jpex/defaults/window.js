@@ -1,3 +1,5 @@
   jpx.defaults.defaults.push(function (NewClass) {
-    NewClass.Register.Constant('$window', window);
+    NewClass.Register.Factory('$window', function () {
+      return window;
+    }).lifecycle.application();
   });
