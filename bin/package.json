@@ -1,6 +1,6 @@
 {
   "name": "jpex-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Jpex for the Browser",
   "main": "jpex.full.js",
   "scripts": {
