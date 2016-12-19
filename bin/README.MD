@@ -26,7 +26,7 @@ Features
 --------  
 Jpex-web has all the same features as the standard node-variant, except for a number of default factories...
 - $fs, $require, $interval, and $tick have been removed.  
-- $promise uses [this](https://github.com/taylorhakes/promise-polyfill) polyfill.  
+- $promise (and anything that uses promises) requires the Promise class to be defined on the global object.  
 - $window has been added which gives access to the global window object.  
 - $xhr has also been added which is a very lightweight ajax function.  
 
