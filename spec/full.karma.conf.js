@@ -4,6 +4,7 @@ module.exports = function (config) {
     frameworks : ['jasmine'],
     files : [
       './spec/setup.js',
+      './spec/node_modules/promise-polyfill/promise.js',
       './jpex/**/index.js',
       './jpex/**/!(index|main).js',
       './jpex/main.js',
