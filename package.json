@@ -10,6 +10,7 @@
     "test": "test"
   },
   "scripts": {
+    "setup" :  "cd compile && npm install && cd ../spec && npm install", 
     "test": "cd spec && npm test",
     "cover": "cd spec && npm run cover",
     "build": "cd compile && npm install && node index"

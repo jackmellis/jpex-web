@@ -5,10 +5,8 @@ language : node_js
 node_js :
   - 4
 install :
-  - npm install
+  - npm run setup
   - npm run build
-
-  - cd spec && npm install && cd ..
 
   - npm install codeclimate-test-reporter -g
   - npm install istanbul -g
