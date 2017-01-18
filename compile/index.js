@@ -52,9 +52,9 @@ var compile = Jpex.extend(function (glob, $fs, $log, $promise, uglify) {
   this.wrap = function (str) {
     $log('Applying IIFE');
     return [
-      '(function(window, jpx){',
+      '(function(window, module, jpx){',
       str,
-      '}(window, {}));'
+      '}(typeof window !== "undefined" && window, typeof module !== "undefined" && module, {}));'
     ].join('\n').replace(/\n\n/g, '\n');
   };
 

@@ -1,1 +1,2 @@
 window.jpx = {};
+window.module = {};

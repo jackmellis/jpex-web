@@ -7,9 +7,10 @@
     value : jpx
   });
 
-  if (typeof module !== 'undefined' && module.exports){
+  if (module && module.exports){
     module.exports = Base;
-  }else if (window){
+  }
+  if (window){
     window.Jpex = Base;
   }
 
