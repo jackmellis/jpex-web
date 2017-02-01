@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private" : true,
   "bin": {
     "jpex-web": "jpex.full.js"
   },
@@ -10,7 +11,7 @@
     "test": "test"
   },
   "scripts": {
-    "setup" :  "npm install && cd compile && npm install && cd ../spec && npm install", 
+    "setup" :  "npm install && cd compile && npm install && cd ../spec && npm install",
     "test": "cd spec && npm test",
     "cover": "cd spec && npm run cover",
     "build": "cd compile && npm install && node index"
