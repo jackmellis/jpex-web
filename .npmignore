@@ -1,0 +1,8 @@
+spec
+coverage
+.nyc_output
+.codeclimate.yml
+.eslintrc.json
+.travis.yml
+.nycrc
+lcov.info

@@ -1,8 +1,0 @@
-{
-  "name": "jpex-web",
-  "version": "0.1.4",
-  "description": "Jpex for the Browser",
-  "main": "jpex.full.js",
-  "author": "Jack Ellis",
-  "license": "ISC"
-}

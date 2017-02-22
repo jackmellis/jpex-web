@@ -23,10 +23,8 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.js"
+  - "src/**/*.js"
 exclude_paths:
-  - bin/**/
-  - compile/**/
   - spec/**/
 ecmaFeatures:
   modules: true
