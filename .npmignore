@@ -5,4 +5,5 @@ coverage
 .eslintrc.json
 .travis.yml
 .nycrc
+.publishrc
 lcov.info

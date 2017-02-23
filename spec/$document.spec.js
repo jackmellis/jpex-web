@@ -1,7 +1,7 @@
 describe("$document", function () {
   let Jpex, defaults, $window, $document;
   beforeEach(function () {
-    Jpex = require('jpex');
+    Jpex = require('jpex').extend();
     defaults = require('../src');
     Jpex.use(defaults);
 
