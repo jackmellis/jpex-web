@@ -1,6 +1,6 @@
 {
   "name": "jpex-web",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0",
   "description": "Jpex defaults for web",
   "main": "src/index.js",
   "scripts": {
@@ -22,17 +22,17 @@
   "bugs": {
     "url": "https://github.com/jackmellis/jpex-web/issues"
   },
-  "homepage": "https://github.com/jackmellis/jpex-web#readme",
+  "homepage": "https://jpex-js.github.io/plugins/jpex-web",
   "devDependencies": {
     "eslint": "^3.15.0",
     "jasmine": "^2.5.3",
-    "jpex": "^2.0.0-alpha.1",
+    "jpex": "^2.0.0",
     "jpex-build-tools": "git+https://github.com/jackmellis/jpex-build-tools.git",
     "nyc": "^10.1.2",
     "publish-please": "^2.2.0"
   },
   "dependencies": {
-    "jpex-defaults": "git+https://github.com/jackmellis/jpex-defaults-core.git",
+    "jpex-defaults": "^2.0.0",
     "promise-polyfill": "^6.0.2"
   },
   "peerDependencies": {
